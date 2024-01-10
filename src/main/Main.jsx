@@ -1,9 +1,9 @@
-import TaskList from "./TaskList"
+import TaskList from './TaskList';
 
-export default function Main(props) {
-    return (
-        <main>
-            <TaskList state={props.state} deleteList={props.deleteList}/>
-        </main>
-    )
+export default function Main({ activete, state, deleteList, edit, tab }) {
+  return (
+    <main>
+      <TaskList activete={activete} state={state} deleteList={deleteList} edit={edit} tab={tab} />
+    </main>
+  );
 }

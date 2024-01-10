@@ -1,12 +1,18 @@
-import FooterItem from "./FooterItem"
-import classes from './footer.module.css'
+import FooterItem from './FooterItem';
+import classes from './footer.module.css';
 
-export default function FooterList() {
-    return (
-        <ul className={classes.filters}>
-            <FooterItem clas={classes.selected}>All</FooterItem>
-            <FooterItem>Active</FooterItem>
-            <FooterItem>Completed</FooterItem>
-        </ul>
-    )
+export default function FooterList({ tab, footer }) {
+  return (
+    <ul className={classes.filters}>
+      <FooterItem tab={tab} footer={footer}>
+        All
+      </FooterItem>
+      <FooterItem tab={tab} footer={footer}>
+        Active
+      </FooterItem>
+      <FooterItem tab={tab} footer={footer}>
+        Completed
+      </FooterItem>
+    </ul>
+  );
 }
